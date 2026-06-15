@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2026-06-15 18:38:42">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>ServiceNow_to_ServiceNow_Ebonding_v1</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>fd6be574c3e10f54e4f37fd1b4013100</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-06-15 18:38:41</sys_created_on>
+<sys_id>331dad38c3e10f54e4f37fd1b40131e2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-06-15 18:38:41</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_c98530adc35af610e4f37fd1b401310c</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;incident&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;E-Bonding update&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+ var r = new sn_ws.RESTMessageV2('ServiceNow_E-Bonding', 'Update record');
+ r.setStringParameterNoEscape('sys_id', current.sys_id);
+ r.setStringParameterNoEscape('detail', current.short_description);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ var httpStatus = response.getStatusCode();
+ gs.addInfoMessage('Record updated'+ httpStatus);
+
+
+})(current, previous);
+// comment
+
+
+
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-07 09:18:28&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c98530adc35af610e4f37fd1b401310c&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;E-Bonding update&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_c98530adc35af610e4f37fd1b401310c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-06-15 18:35:04&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=c98530adc35af610e4f37fd1b401310c"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c98530adc35af610e4f37fd1b401310c&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-07 09:18:27&lt;/sys_created_on&gt;&lt;sys_id&gt;031834a1c39af610e4f37fd1b40131a8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-07 09:18:27&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1932750406</payload_hash>
+<remote_update_set display_value="ServiceNow_to_ServiceNow_Ebonding_v1">331dad38c3e10f54e4f37fd1b40131e2</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-06-15 18:38:41</sys_created_on>
+<sys_id>3f1dad38c3e10f54e4f37fd1b40131e3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19ecc90d57c0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-06-15 18:38:41</sys_updated_on>
+<table>incident</table>
+<target_name>E-Bonding update</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_guid>b24c65f4c7e10f54f2b38f9a2e2e7afb</update_guid>
+<update_guid_history>b24c65f4c7e10f54f2b38f9a2e2e7afb:1932750406,701cedb4f9e10f54dd225796e0a81d00:-1441529153,a35559cacaaa7a1000aa3b70f94517ef:-672214786,e23555ca58aa7a103eedb0df9a263b7a:-1537256489,e842950699aa7a1067db53030953df38:758429069,1241d182d3aa7a108201143eaff4345d:-1931681555,28dfcd8e5e6a7a104384e792d270638e:227619852,eaf84542396a7a107c9c68f34e68b7e1:616384027,641601ca5f2a7a1099a13e3e2d7db84d:-430104990,10d786b16d92ba10e7aa31e4ef330931:616384027,61f96aadd3d63a108edfce28953a3c63:-430104990,b849a261bad63a10657ae659a0f06062:168627314,42092a2df6d63a105b73c0877133fcb2:99155243,68f01125bd5ef61064000cb7ec12f3fa:860500256,a3aa7429aa9af610188839349372b53b:-1115161,171834a1299af6109fd11b95357bb1af:1247943374</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_rest_message_27320911c35e7610e4f37fd1b401314a</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>basic</authentication_type><basic_auth_password/><basic_auth_profile display_value="dev329620">4b644915c35e7610e4f37fd1b40131c2</basic_auth_profile><basic_auth_user/><description>We are doing E-Bonding between two ServiceNow instance....</description><name>ServiceNow_E-Bonding</name><oauth2_profile/><protocol_name/><rest_endpoint>https://dev329620.service-now.com</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-01-06 15:34:52</sys_created_on><sys_id>27320911c35e7610e4f37fd1b401314a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>ServiceNow_E-Bonding</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_rest_message_27320911c35e7610e4f37fd1b401314a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-06-15 18:37:15</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+<payload_hash>-870186458</payload_hash>
+<remote_update_set display_value="ServiceNow_to_ServiceNow_Ebonding_v1">331dad38c3e10f54e4f37fd1b40131e2</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-06-15 18:38:41</sys_created_on>
+<sys_id>f71dad38c3e10f54e4f37fd1b40131e2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19ecc92d6010000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-06-15 18:38:41</sys_updated_on>
+<table/>
+<target_name>ServiceNow_E-Bonding</target_name>
+<type>REST Message</type>
+<update_domain>global</update_domain>
+<update_guid>f2cce538ebe10f54c9c5e2d9c411df0e</update_guid>
+<update_guid_history>f2cce538ebe10f54c9c5e2d9c411df0e:-870186458,5ba44155e45e7610e3e2e9a4b2717f63:-1265421786</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_2b598d5dc35e7610e4f37fd1b401313e</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;incident&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;E-Bonding&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+var r = new sn_ws.RESTMessageV2('ServiceNow_E-Bonding', 'Create an Incident');
+r.setStringParameterNoEscape('details',current.short_description);
+r.setStringParameterNoEscape('callerDetails',current.caller_id);
+r.setStringParameterNoEscape('cat',current.category);
+r.setStringParameterNoEscape('id',current.sys_id);
+
+ var response = r.execute();
+ var responseBody = response.getBody();
+ // gs.log("target instance"+ responseBody );
+ var prsData=JSON.parse(responseBody); //go to the json body and convert it to readable format
+ var incTargetNum=prsData.result.number;//taget incident number
+ gs.log("Target Number ="+incTargetNum );
+ current.correlation_id=incTargetNum;
+ var httpStatus = response.getStatusCode();
+ gs.addInfoMessage('the number is' +incTargetNum);
+
+})(current, previous);
+// comment]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-06 16:13:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2b598d5dc35e7610e4f37fd1b401313e&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;E-Bonding&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_2b598d5dc35e7610e4f37fd1b401313e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-06-15 18:35:01&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=2b598d5dc35e7610e4f37fd1b401313e"/&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;2b598d5dc35e7610e4f37fd1b401313e&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-01-06 16:13:43&lt;/sys_created_on&gt;&lt;sys_id&gt;dc9dc915c39e7610e4f37fd1b40131bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-01-06 16:13:43&lt;/sys_updated_on&gt;&lt;table&gt;sys_script&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1585205551</payload_hash>
+<remote_update_set display_value="ServiceNow_to_ServiceNow_Ebonding_v1">331dad38c3e10f54e4f37fd1b40131e2</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-06-15 18:38:41</sys_created_on>
+<sys_id>f71dad38c3e10f54e4f37fd1b40131e3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>19ecc90cb160000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-06-15 18:38:41</sys_updated_on>
+<table>incident</table>
+<target_name>E-Bonding</target_name>
+<type>Business Rule</type>
+<update_domain>global</update_domain>
+<update_guid>d64c65f4aae10f5457543681876ffbf0</update_guid>
+<update_guid_history>d64c65f4aae10f5457543681876ffbf0:-1585205551,840ce9b48be10f54be0beef0919490a3:831915618,f05559caddaa7a105eb8cbb4ad8ac411:-1558687663,c296cdca4e2a7a10a0cc9beba8e78ad2:1447008066,edd70ab15592ba102d04c03d4877595e:-1558687663,af05a6250ed63a107715396f211d7841:1447008066,6093ae2952163a105213964acd75beb2:1386640734,266bfc69d29af6106993eb1a7c2dc614:-1091206598,f086c025c416f61070f04a95adbdf2cf:-2018295413,08f1ad9d9e12b61073791c014447fdf3:-628057732,58a1619d9212b6106b360de3bcae415b:-1953075539,8521215d6e12b6100f1b9ab6dbad1116:-1593102018,35202999af12b6101092eb63f1868824:2001167664,8a5b15510212b6103f0247b87a8ca9e6:-523329153,357495155dde7610a798ffd358db42d3:1358395000,d9735d515ede7610e08e2c5cfa18e6d7:851986047,5f41995dcf9e76100e4366b93bbed23b:-1402181785,c78f0559919e76107f2916ae5adb77d7:-1740101657,e09dc955449e76106fec40e17cfb8b92:-698026248</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
